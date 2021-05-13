@@ -52,18 +52,45 @@ header {
 	margin-top: 80px;
 }
 
-h1 {
+header h1 {
 	text-align: center;
 	font-size: 50px;
 	margin-bottom: 0;
 }
 
-hr {
+header hr {
 	width: 150px;
 	height: 4px;
 	background-color: black;
 	border: none;
 	border-radius: 5px;
+}
+
+main {
+	display: flex;
+	padding: 40px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.project {
+	width: 300px;
+	margin: 10px;
+	background-color: white;
+	border-radius: 3px;
+}
+
+.project img {
+	display: block;
+	width: 300px;
+	object-fit: cover;
+	border-radius: 3px 3px 0 0;
+}
+
+.project p {
+	margin: 5px;
+	padding-left: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -79,7 +106,7 @@ hr {
 		display: none;
 	}
 
-	h1 {
+	header h1 {
 		font-size: 45px;
 	}
 }

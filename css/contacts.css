@@ -56,8 +56,53 @@ main {
 	justify-content: center;
 }
 
+.form-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
 .form-container h1 {
 	font-size: 60px;
+	align-self: center;
+}
+
+.form-container form {
+	background-color: white;
+	padding: 50px;
+	border-radius: 15px;
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container form h2 {
+	margin-top: 0;
+	font-size: 30px;
+}
+
+.block {
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 17px;
+}
+
+.block input, textarea {
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid black;
+}
+
+.block input:focus, textarea:focus {
+	outline: none;
+	border-bottom: 2px solid midnightblue;
+	box-shadow: 0  6px 8px -8px midnightblue;
+}
+
+form button {
+	padding: 15px 20px 15px 20px;
+	color: white;
+	font-size: 15px;
+	background-color: #120E48;
+	border: none;
+	border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {

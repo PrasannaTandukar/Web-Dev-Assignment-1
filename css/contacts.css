@@ -5,28 +5,40 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
-/*Try new google fonts*/
-
+/* Start of Navigation bar styling */
 .nav-bar {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	text-align: right;
 	background-color: #353A40;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	padding-right: 60px;
 	box-shadow: 0  4px 4px rgba(0, 0, 0, 0.2);
+}
+
+#toggler {
+	display: none;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 2px;
+	right: 10px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 2;
 }
 
 .hamburger {
 	display: none;
 	margin: 3px;
 	padding: 10px;
+	float: right;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+	z-index: 1;
 }
 
 .hamburger-line {
@@ -37,16 +49,23 @@ body {
 	border-radius: 3px;
 }
 
-.nav-bar a {
-	padding: 20px;
+.box {
+	margin: 0 30px 0 0;
+}
+
+.box a {
+	margin: 0 10px;
+	padding: 0 5px;
 	text-decoration: none;
 	font-size: 15px;
+	line-height: 60px;
 	color: white;
 }
 
 .nav-bar a:hover {
 	color: lightgrey;
 }
+/* End of Navigation Bar styling */
 
 main {
 	height: 100vh;
@@ -60,11 +79,13 @@ main {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	z-index: 2;
 }
 
 .form-container h1 {
 	font-size: 60px;
 	align-self: center;
+	padding-bottom: 150px;
 }
 
 .form-container form {
@@ -104,18 +125,62 @@ form button {
 	background-color: #120E48;
 	border: none;
 	border-radius: 10px;
+	cursor: pointer;
+	transition: none 0.3s;
+}
+
+form button:hover {
+	background-color: #1C4966;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20vh;
+	padding-bottom: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-end;
+	background-color: white;
+	box-shadow: 8px 0 5px rgba(0, 0, 0, 0.2);
+	z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
+/* Start of Navigation Bar styling */
 	.nav-bar {
 		padding-right: 10px;
 	}
 
 	.hamburger {
-		display: inline-block;
+		display: block;
 	}
 
-	.nav-bar a {
-		display: none;
+	#toggler {
+		display: block;		
 	}
+
+	.box {
+		clear: both;
+		display: none;
+		width: 100%;
+		text-align: center;
+		background-color: white;
+	}
+
+	.box a {
+		display: block;
+		margin: 0;
+		color: black;
+		font-size: 17px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+	}
+
+	#toggler:checked + .box {
+		display: block;
+	}
+	/* End of navigation bar styling */
 }

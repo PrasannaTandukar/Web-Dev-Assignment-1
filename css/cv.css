@@ -68,33 +68,41 @@ body {
 /* End of Navigation Bar styling */
 
 main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cv {
 	margin: 90px 20px 20px 20px;
-	padding: 20px;
+	width: 900px;
 	display: grid;
 	grid-template-columns: 1fr 3fr;
-	grid-template-rows: 50% 50%;
-	grid-gap: 10px 10px;
+	grid-template-rows: 1fr auto;
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
-.profile {
-	grid-row: 1 / 3;
+.container {
+	padding: 20px;
 }
 
-/*.container {
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.profile {
+	grid-row: 1 / 3;
+	border-right: 1px solid black;
 }
-*/
 
 .profile img {
 	height: 200px;
 	width: 200px;
 	object-fit: cover;
+}
+
+.computer {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	border-top: 1px solid black;
 }
 
 @media screen and (max-width: 768px) {

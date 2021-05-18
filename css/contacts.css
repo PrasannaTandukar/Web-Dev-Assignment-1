@@ -130,7 +130,8 @@ form button {
 }
 
 form button:hover {
-	background-color: #1C4966;
+	animation: change 0.5s;
+	animation-fill-mode: forwards;
 }
 
 footer {
@@ -149,6 +150,12 @@ footer {
 
 footer div {
 	padding: 10px;
+}
+
+@keyframes change {
+	100% {
+		background-color: #1C4966;
+	}
 }
 
 @media screen and (max-width: 768px) {

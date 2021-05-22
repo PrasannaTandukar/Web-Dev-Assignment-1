@@ -114,6 +114,11 @@ main {
 	font-size: 17px;
 }
 
+.site-report img {
+	max-width: 100%;
+	height: auto;
+}
+
 @media screen and (max-width: 768px) {
 /* Start of Navigation Bar styling */
 	.nav-bar {

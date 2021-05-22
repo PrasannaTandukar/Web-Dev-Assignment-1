@@ -70,11 +70,12 @@ main {
 	margin: 60px auto auto auto;
 	padding-top: 10px;
 	padding-right: 30px;
-	width: 1000px;
+	max-width: 1000px;
 	display: grid;
 	grid-template-columns: 220px auto;
 	grid-column-gap: 20px;
 	background-color: white;
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
 .link-bar ul {
@@ -147,4 +148,23 @@ main {
 		display: block;
 	}
 	/* End of navigation bar styling */
+
+	main {
+		width: 100%;
+		padding: 0;
+		grid-template-columns: auto;
+		grid-column-gap: 0;
+	}
+
+	.link-bar {
+		margin-left: -30px;
+	}
+
+	.link-bar a {
+		width: 95%;
+	}
+
+	.site-report {
+		margin: auto 15px auto 15px;
+	}
 }

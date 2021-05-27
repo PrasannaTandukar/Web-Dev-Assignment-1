@@ -16,6 +16,7 @@ body {
 	text-align: right;
 	background-color: #353A40;
 	box-shadow: 0  4px 4px rgba(0, 0, 0, 0.2);
+	z-index: 3;
 }
 
 #toggler {
